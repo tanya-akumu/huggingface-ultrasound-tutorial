@@ -27,9 +27,13 @@ pip install -r requirements.txt  # or run the pip command shown below
 pip install transformers datasets torchvision pycocotools matplotlib scipy pillow
 ```
 
-3. Open the notebook `huggingface_ultrasound_tutorial_final.ipynb` and follow the cells. This repository intentionally tracks the annotation JSON files under `dataset/` but ignores the image files themselves (`*.png`) to keep the repo lightweight.
+3. Open the notebook `huggingface_ultrasound_tutorial_final.ipynb` and follow the cells.
 
-To run the notebook, download the dataset from Zenodo, then reconstruct the expected folder structure locally by using the `image_filename` values from the JSON annotations to place the image files under `dataset/train_dataset/` and `dataset/test_dataset/`.
+Dataset layout
+- This repository keeps the annotation JSON files in `dataset/train_dataset/` and `dataset/test_dataset/`.
+- The PNG image files are not committed to git to keep the repo lightweight.
+- To run the notebook, download the dataset from Zenodo, then reconstruct the expected folder structure locally by using the `image_filename` values from the JSON annotations to place the image files under `dataset/train_dataset/` and `dataset/test_dataset/`.
+- The notebook reads each annotation file, matches the `image_filename` field to the corresponding local `.png` image, and then loads the sample for visualization and training.
 
 A CSV `African_planes_database.csv` is included in this repository for convenience.
 
