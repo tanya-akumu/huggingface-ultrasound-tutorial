@@ -1,0 +1,11 @@
+.venv/
+Algeria/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+dataset/**/*.png
+dataset/**/*.PNG
+detr-ultrasound/
